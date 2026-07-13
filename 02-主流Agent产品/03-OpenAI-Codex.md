@@ -18,6 +18,16 @@
 
 抛开合并这层不谈，Codex 的内核和其他终端编程 Agent 是一路货色：理解代码库、编辑文件、执行 shell、跑测试、操作 git、通过 MCP 接外部工具。它的风格我觉得可以概括为"给任务、自己跑完"，自主度调得比较高。OpenAI 官方给的数据也挺能说明它的普及程度——每周有超过五百万人在用 Codex，而且其中大约五分之一的人已经把它用在了软件开发之外的活儿上。
 
+## 桌面客户端怎么装（多数人现在走这条路）
+
+自从并进 ChatGPT 之后，对大部分人来说，用 Codex 最省事的方式已经不是装命令行，而是**装那个 ChatGPT 桌面客户端**——因为合并后 Codex 就是这个 App 里的一个内置模式，装好 App 相当于顺带就有了 Codex。整个过程比 CLI 简单得多，基本是"下载、安装、登录"三下。
+
+先去官方下载页 [chatgpt.com/download](https://chatgpt.com/download/) 拿安装包，Mac 和 Windows 都有；Windows 用户嫌麻烦的话，直接在微软商店（Microsoft Store）搜 ChatGPT 装也一样。装完打开，用你的 ChatGPT 账号登录进去，你会看到界面里并排着 **Chat、Work、Codex** 三个模式，切到 Codex 那个就是编程 Agent 了。它能直接对接你本地的文件、代码仓库、终端和各类开发者工具，干的还是那套"理解代码库、改文件、跑命令"的活，只是包在一个图形界面里，对不爱折腾命令行的人友好很多。
+
+有两类人要特别说一句。一类是**以前装过那个独立 Codex App 的老用户**，你不用从头来过，直接把它更新到新的 ChatGPT App、再打开里面的 Codex 就行，官方给了平滑迁移的路子。另一类是**平台党**：Windows 上可以用 `Alt + Space` 快捷键随时唤出 ChatGPT，Mac 上则支持语音输入，跟它开口说话，这些小便利也算是桌面端相比 CLI 多出来的甜头。
+
+至于该选桌面客户端还是命令行，其实很好判断：想要图形界面、开箱即用、顺带把 Chat 和 Work 一起用上，就装桌面客户端；如果你要的是脚本化、进 CI、或者在远程服务器上跑，那还是往下看 CLI。两者用的是同一个账号、同一套额度，随时切换，不冲突。
+
 ## 怎么装 CLI
 
 如果你想走终端这条路，前提是本机有 Node.js，建议直接上 22 或更新的版本（有些版本 18 也能跑，但新版本对 22+ 更稳当），外加一个有额度的 OpenAI 账号——ChatGPT 的 Plus、Pro 订阅都自带额度，新账号一般还送一点免费额度够你试水。
@@ -50,6 +60,6 @@ npm install -g @openai/codex
 
 ---
 
-参考：[npm 包](https://www.npmjs.com/package/@openai/codex) ｜ [Codex CLI 文档](https://developers.openai.com/codex/cli) ｜ [用 ChatGPT 套餐使用 Codex](https://help.openai.com/en/articles/11369540) ｜ Codex 并入 ChatGPT 报道（2026-07-09，TechTimes / Silicon Report 等）
+参考：[ChatGPT 桌面客户端下载](https://chatgpt.com/download/) ｜ [迁移到新版 ChatGPT 桌面 App](https://help.openai.com/en/articles/20001276) ｜ [npm 包](https://www.npmjs.com/package/@openai/codex) ｜ [Codex CLI 文档](https://developers.openai.com/codex/cli) ｜ [用 ChatGPT 套餐使用 Codex](https://help.openai.com/en/articles/11369540) ｜ Codex 并入 ChatGPT 报道（2026-07-09，TechTimes / Silicon Report 等）
 
 ← [Claude Code](02-Claude-Code.md) ｜ 下一篇：[OpenClaw](04-OpenClaw.md)
