@@ -58,11 +58,11 @@ export PATH=~/.npm-global/bin:$PATH   # 建议把这行写进 ~/.bashrc 或 ~/.z
 
 装法很简单，在 VS Code 的扩展市场里搜 Claude Code（Anthropic 官方那个）装上，它会在侧边栏开一个对话面板，用的还是你同一个 Claude 账号，跟命令行是同一个 Agent、同一套能力，只是换了个更顺手的壳。
 
-<img src="image.png" alt="VS Code 里的 Claude Code 对话面板" width="600" />
+<img src="images/claude-vscode-panel.png" alt="VS Code 里的 Claude Code 对话面板" width="600" />
 
 顺手在哪呢？关键就是**"看着代码聊"这件事变得自然了**。你在编辑器里选中一段代码，直接在对话框里说"把这段重构一下"或者"这里为什么会报错"，它就带着上下文去改；它做的每一处改动都会以 diff 的形式清清楚楚摆在你面前，你一眼就能看出它动了哪几行，满意就采纳、不满意就打回，完全不用像在终端里那样靠脑补去想它改了什么。它要跑命令、要修改文件，也都在你眼皮底下发生，那种"我在指挥、它在执行、我随时能叫停"的掌控感，是编辑器这个形态最大的好处。
 
-<img src="image-1.png" alt="Claude Code 以 diff 形式展示改动" width="600" />
+<img src="images/claude-vscode-diff.png" alt="Claude Code 以 diff 形式展示改动" width="600" />
 
 所以我的建议是，如果你平时就在 VS Code 里写代码，那就优先用插件这条路，把它当成一个坐在你旁边、你说一句它改一片、改完还把 diff 递给你看的结对搭档；终端那套留着应急和自动化就好。JetBrains 系列（IDEA、PyCharm 等）也有官方插件，思路完全一样，喜欢哪个编辑器就用哪个。
 
